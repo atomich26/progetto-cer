@@ -15,11 +15,14 @@ RUN --mount=type=bind,source=package.json,target=package.json \
     --mount=type=cache,target=/root/.npm \
     npm ci --omit=dev
  
-# Crea un nuovo utente per avviare Node
-USER node
-
 #Copia tutti i file del progetto
 COPY . .
+
+# Installa i pacchetti npm
+RUN npm install
+
+# Crea un nuovo utente per avviare Node
+USER node
 
 # Espone l'applicazione sulla porta 3000
 EXPOSE 3000

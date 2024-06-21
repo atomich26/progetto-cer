@@ -906,7 +906,7 @@ button:focus:not(:focus-visible) {
   top: 0;
   right: 0;
   left: 0;
-  margin: 20px;
+  margin: 0px;
 }
 
 .product-info {

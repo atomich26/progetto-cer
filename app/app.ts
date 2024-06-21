@@ -1,9 +1,8 @@
 import express, { Request, Response } from "express";
-import dotenv from "dotenv";
-import { checkDB, getAllFaq } from "./database";
+import {getAllFaq, getAllTracks } from "./db/database";
+import { checkDB } from "./db/connection";
 
 const app = express();
-dotenv.config();
 
 const port = process.env.PORT || 3000;
 
@@ -18,21 +17,14 @@ app.get('/', async (req: Request, res: Response) => {
     res.render("index.twig", { title: "Soundwave | Music as lifestyle", nav: "home"});
 });
 
-app.get("/app", async (req, res) => {
-    res.render("about.twig", {title: "Soundwave | Scarica", nav: "app"});
-});
-
 app.get("/faq", async (req, res) => {
-    const faqs = getAllFaq();
+    const faqs = await getAllFaq();
     res.render("faq.twig", {title: "Soundwave | FAQ", nav: "faq", faqs: faqs});
 });
 
 app.get("/charts", async (req, res) => {
-    res.render("about.twig", {title: "Soundwave | Classifiche", nav: "charts"});
-});
-
-app.get("/about", async (req, res) => {
-    res.render("about.twig", {title: "Soundwave | Chi siamo", nav: "about"});
+    const tracks = await getAllTracks();
+    res.render("charts.twig", {title: "Soundwave | Classifiche", nav: "charts", tracks: tracks});
 });
 
 app.get("/login", async (req, res) => {

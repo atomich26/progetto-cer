@@ -1,8 +1,8 @@
 const { Sequelize, DataTypes } = require('sequelize');
-import { connection } from "../database";
+import sequelize from "../connection";
 
-export const Faq = connection.define(
-  'faqs',
+export const Faq = sequelize.define(
+  'Faqs',
   {
     // Model attributes are defined here
     question: {

@@ -5,8 +5,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Faq = void 0;
 const { Sequelize, DataTypes } = require('sequelize');
-const database_1 = __importDefault(require("../database"));
-exports.Faq = database_1.default.define('faqs', {
+const connection_1 = __importDefault(require("../connection"));
+exports.Faq = connection_1.default.define('Faqs', {
     // Model attributes are defined here
     question: {
         type: DataTypes.STRING,

@@ -24,10 +24,7 @@ RUN npm install
 # Compila i file typescript
 RUN npx tsc
 
-# Crea un nuovo utente per avviare Node
-USER node
-
 # Espone l'applicazione sulla porta 3000
 EXPOSE 3000
 
-CMD ["node", "./build/app.js"]
+CMD ["npm", "run", "init"]

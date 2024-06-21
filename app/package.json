@@ -4,6 +4,7 @@
   "description": "App for song charts",
   "main": "./build/app.js",
   "scripts": {
+    "sequelize": "ts-node ./node_modules/.bin/sequelize",
     "dev": "npx tsc && node --env-file ./.env ./build/app.js",
     "test": "echo \"Error: no test specified\""
   },

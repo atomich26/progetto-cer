@@ -1,0 +1,8 @@
+import { resolve } from 'path';
+
+export default {
+  'config': resolve('config', 'config.json'),
+  'models-path': resolve('build', 'models'),
+  'seeders-path': resolve('build', 'seeders'),
+  'migrations-path': resolve('build', 'migrations')
+};

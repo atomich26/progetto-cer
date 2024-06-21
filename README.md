@@ -6,6 +6,7 @@ Durante il corso di Calcolatori Elettronici e Reti di Calcolatori è stato illus
 ## Tecnologia alla base: Docker Engine
 
 ## Idea e organizzazione
+L'idea alla base del progetto è l'uso di Docker, usando molteplici container in comunicazione tra di loro e mostrare le potenzialità dell'architettura a microservizi e la facile integrazione di Docker nel processo di sviluppo di software in cloud.
 
 ## Sviluppo e tecnologie adottate
 

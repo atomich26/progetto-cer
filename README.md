@@ -8,10 +8,14 @@ Un container è un'unità standard (definita dalla OCI per opera della Linux Fou
 
 Docker è una tecnologia di containerizzazione che permette agli sviluppatori di creare, distribuire e gestire applicazioni in container.La piattaforma è composta principalmente dal Docker Engine, che è il cuore del sistema. Esso consiste in un'applicazione client-server che include il Docker Daemon, un servizio in background che gestisce i container, e il Docker Client, un'interfaccia a riga di comando utilizzata per interagire con il daemon. Con Docker è semplice aggiungere o rimuovere istanze di container in base alla domanda, consentendo alle applicazioni di scalare orizzontalmente in modo efficiente. Questo è particolarmente utile per le applicazioni basate su microservizi, dove ogni componente dell'applicazione può essere eseguito in un container separato. I principali vantaggi di Docker svolgono un ruolo cruciale anche nella fase di sviluppo di applicazioni; esso permette una facile integrazione nel processo di sviluppo e distribuzione delle applicazioni CI/CD permettendo di migliorare l'efficienza delle risorse, di ridurre i costi operativi e soprattutto la gestione del ciclo di vita delle applicazioni, dalla creazione e test fino alla distribuzione e al monitoraggio.
 
-## Idea e organizzazione
-L'idea alla base del progetto è l'uso di Docker, usando molteplici container in comunicazione tra di loro e mostrare le potenzialità dell'architettura a microservizi e la facile integrazione di Docker nel processo di sviluppo di software in cloud.
+## Idea e sviluppo
+Il progetto consiste in una web app di un'azienda simulata che offre un servizio di musica streaming a pagamento. La web app presenta tre pagine:
 
-## Sviluppo e tecnologie adottate
+#### Home page
+
+#### Classifica
+
+#### FAQ
 
 
 ## Modalità d'uso

@@ -13,6 +13,7 @@ Il progetto consiste in una web app di un'azienda simulata che offre un servizio
 
 #### Home page
 La home page presenta tutte le informazioni simulate dell'azienda.
+
 ![alt text](./img/home.png)
 
 #### Classifica
@@ -22,9 +23,12 @@ Questa pagina presenta una classifica fittizia dei migliori brani del momento. T
 
 #### FAQ
 Questa pagina presenta delle faq fittizie memorizzate all'interno di un database.
+
 ![alt text](./img/faq.png)
 
 ### Sviluppo
+![alt text](./img/faq.png)
+
 La web app realizzata si presenta come una app multi-container che sfrutta diversi servizi per funzionare al meglio. Lo stack di container è stato realizzato attraverso un apposito file docker-compose che costruisce ed inizializza tre container che costituiscono i tre servizi principali dell'app:
 
 #### Proxy server

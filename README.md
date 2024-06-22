@@ -12,11 +12,30 @@ Docker è una tecnologia di containerizzazione che permette agli sviluppatori di
 Il progetto consiste in una web app di un'azienda simulata che offre un servizio di musica streaming a pagamento. La web app presenta tre pagine:
 
 #### Home page
+La home page presenta tutte le informazioni simulate dell'azienda.
+![alt text](./img/home.png)
 
 #### Classifica
+Questa pagina presenta una classifica fittizia dei migliori brani del momento. Tutti i brani presentati sono disponibili tramite il lettore web di Spotify. 
+
+![alt text](./img/chart.png)
 
 #### FAQ
+Questa pagina presenta delle faq fittizie memorizzate all'interno di un database.
+![alt text](./img/faq.png)
 
+### Sviluppo
+La web app realizzata si presenta come una app multi-container che sfrutta diversi servizi per funzionare al meglio. Lo stack di container è stato realizzato attraverso un apposito file docker-compose che costruisce ed inizializza tre container che costituiscono i tre servizi principali dell'app:
+
+#### Proxy server
+L'immagine del container è stata costruita partendo da un'immagine di base di Nginx per poi essere modificata con l'aggiunta di una configurazione personalizzata. Il proxy server è stato aggiunto solo a scopo dimostrativo, per rendere il progetto tanto più vicino alle web app quelle presenti in ambito professionale.
+
+#### App
+Il container della web app si basa su un'immagine NodeJS opportunamente configurata secondo le esigenze del progetto all'interno di un Dockerfile.
+La web app è stata realizzata in ambiente NodeJS che sfrutta ExpressJs per le funzionalità web-server, il tutto realizzato con Typescript. I contenuti di alcune pagine web presenti nella base di dati sono ottenute tramite il pacchetto Sequelize che fornisce l'ORM necessario. Per la realizzazione del frontend si è optato per un template engine TwigJs che ha facilitato il render delle pagine web dinamiche.
+
+#### Database
+Il database è stato realizzato tramite un container costruito con un'immagine di Postgres. All'interno sono memorizzati i testi delle faq e le informazioni sui brani e i rispettivi lettori web.
 
 ## Modalità d'uso
 Per utilizzare il progetto e provare il suo corretto funzionamento è necessario eseguire alcuni passaggi fondamentali. Come anticipato prima, l'applicazione gira in container Docker quindi sarà necessario costruirne tutte le immagini necessarie per i container e avviarli. Fortunatamente tutto ciò viene automatizzato da Docker e quindi basterà lanciare un solo comando per la costruzione dell'infrastruttura:

@@ -27,7 +27,7 @@ Questa pagina presenta delle faq fittizie memorizzate all'interno di un database
 ![alt text](./img/faq.png)
 
 ### Sviluppo
-![alt text](./img/faq.png)
+![alt text](./img/diagramma.drawio.png)
 
 La web app realizzata si presenta come una app multi-container che sfrutta diversi servizi per funzionare al meglio. Lo stack di container è stato realizzato attraverso un apposito file docker-compose che costruisce ed inizializza tre container che costituiscono i tre servizi principali dell'app:
 

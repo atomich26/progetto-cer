@@ -27,12 +27,12 @@ Questa pagina presenta delle faq fittizie memorizzate all'interno di un database
 ![alt text](./img/faq.png)
 
 ### Sviluppo
-![alt text](./img/diagramma.drawio.png)
-
 La web app realizzata si presenta come una app multi-container che sfrutta diversi servizi per funzionare al meglio. Lo stack di container è stato realizzato attraverso un apposito file docker-compose che costruisce ed inizializza tre container che costituiscono i tre servizi principali dell'app:
 
+![alt text](./img/diagramma.drawio.png)
+
 #### Proxy server
-L'immagine del container è stata costruita partendo da un'immagine di base di Nginx per poi essere modificata con l'aggiunta di una configurazione personalizzata. Il proxy server è stato aggiunto solo a scopo dimostrativo, per rendere il progetto tanto più vicino alle web app quelle presenti in ambito professionale.
+L'immagine del container è stata costruita partendo da un'immagine di base di Nginx per poi essere modificata con l'aggiunta di una configurazione personalizzata. Il proxy server è stato aggiunto solo a scopo dimostrativo, per rendere il progetto tanto più vicino alle web app presenti in ambito professionale.
 
 #### App
 Il container della web app si basa su un'immagine NodeJS opportunamente configurata secondo le esigenze del progetto all'interno di un Dockerfile.
